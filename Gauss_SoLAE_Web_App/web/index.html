@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>_INTEGRAL_</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="logic.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <form>
+            <label for="matrix">Расширенная матрица (со столбцом свободных членов):</label>
+            <br>
+            <textarea id="matrix" name="matrix" cols="40" rows="10"></textarea>
+            <br><br>
+            <label for="mpi">Использовать MPI (1 - да, 0 - нет):</label>
+            <br>
+            <input id="mpi" type="text" name="mpi"><br>
+            <br>
+            <input type="button" onclick="solve();" value="решить">
+            <input type="button" onclick="reset();" value="сбросить">
+        </form>
+
+        <br><br><br>
+        <div id="progress" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <br><br>
+        Решение: <span id="solution"></span><br>
+        Время: <span id="time"></span>
+
+        <script>
+            toggleProgress();
+        </script>
+    </body>
+</html>
